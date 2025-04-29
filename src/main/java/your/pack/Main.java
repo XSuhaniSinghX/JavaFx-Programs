@@ -1,4 +1,4 @@
-package src.main.java.your.package;  // Make sure this matches your directory structure
+package your.pack;  // Make sure this matches your directory structure
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
