@@ -1,4 +1,4 @@
-package your.package; 
+package your.package;  // Make sure this matches your directory structure
 
 public class Main {
     public static void main(String[] args) {
