@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -7,58 +6,29 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
-  <artifactId>javafx-app</artifactId>
+  <artifactId>simple-java-app</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <javafx.version>21.0.1</javafx.version> <!-- Update to JavaFX 21 -->
   </properties>
 
   <dependencies>
-    <!-- JavaFX Controls -->
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-controls</artifactId>
-      <version>${javafx.version}</version>
-    </dependency>
-    <!-- JavaFX FXML -->
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-fxml</artifactId>
-      <version>${javafx.version}</version>
-    </dependency>
+    <!-- Add any dependencies you need here -->
   </dependencies>
 
   <build>
     <plugins>
-      <!-- JavaFX Maven Plugin -->
       <plugin>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-maven-plugin</artifactId>
-        <version>${javafx.version}</version>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
         <configuration>
-          <mainClass>your.package.Main</mainClass> <!-- Change this to your actual Main class -->
+          <source>17</source>
+          <target>17</target>
         </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>run</goal> <!-- This will run the application after build -->
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
-
-  <repositories>
-    <repository>
-      <id>openjfx</id>
-      <url>https://openjfx.io/maven-repo/</url>
-    </repository>
-  </repositories>
-
 </project>
